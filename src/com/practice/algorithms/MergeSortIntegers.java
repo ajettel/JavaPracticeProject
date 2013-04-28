@@ -12,7 +12,8 @@ import java.util.Arrays;
 public class MergeSortIntegers {
 
 	/**
-	 * 
+	 * This function sorts an array of integers with a mergesort. It splits the array down to size 1 and 
+	 * then merges them back together
 	 * @param unsortedList an array of integers that need to be sorted
 	 * @return the array of sorted integers
 	 */
@@ -20,7 +21,7 @@ public class MergeSortIntegers {
 		if(unsortedList == null){
 			return null;
 		}
-		
+
 		// If the list is of length 1 or less, it's sorted
 		if(unsortedList.length <= 1){
 			return unsortedList;
@@ -37,7 +38,7 @@ public class MergeSortIntegers {
 		// Return the merged result
 		return mergeLists(sortedLeft,sortedRight);
 	}
-	
+
 	/**
 	 * 
 	 * @param leftList
@@ -94,30 +95,41 @@ public class MergeSortIntegers {
 			}
 		}
 	}
+	/**
+	 * A helper function that prints out an array of integers
+	 * @param list The list to be printed
+	 */
 	public void printList(int[] list){
 		if(list == null){
 			System.out.println("List empty");
 			return;
 		}
+
 		int length = list.length;
 		for(int ii = 0; ii < length;ii++){
 			System.out.print(list[ii]);
-			if(ii != length-1){
+			if(ii != length-1){ // Don't insert a comma after the last element
 				System.out.print(", ");
 			}
 		}
 		System.out.println("");
 
 	}
+	/**
+	 * A helper function that generates a list of 'size' with the 'maxValue' as the highest value in it
+	 * @param size The size of the random list generated
+	 * @param maxValue The maximum value found in the list [0, maxValue]
+	 * @return The generated list
+	 */
 	public int[] generateRandomList(int size, int maxValue){
 		int[] randomArray = new int[size];
 		SecureRandom numberGenerator = new SecureRandom();
 		int currentIndex = 0;
-		
+
 		while(currentIndex < size){
 			randomArray[currentIndex] = numberGenerator.nextInt(maxValue);
 			currentIndex++;
-			
+
 		}
 		return randomArray;
 	}
