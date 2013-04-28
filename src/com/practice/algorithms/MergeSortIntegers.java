@@ -44,7 +44,7 @@ public class MergeSortIntegers {
 	 * @param rightList
 	 * @return the merged, sorted list
 	 */
-	public int[] mergeLists(int[] leftList, int[] rightList) {
+	private int[] mergeLists(int[] leftList, int[] rightList) {
 		if(leftList == null){
 			return rightList;
 		}

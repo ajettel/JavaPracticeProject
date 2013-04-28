@@ -1,11 +1,16 @@
-package com.practice.main;
+package com.practice;
 
 import java.util.ArrayList;
 
 import com.practice.algorithms.MergeSortIntegers;
 import com.practice.algorithms.QuickSortIntegers;
 import com.practice.datastructures.MyHashMap;
-
+import com.practice.fileio.TextfileWriter;
+/**
+ * This is the main function that executes the examples in this project
+ * @author Alex
+ * 
+ */
 public class MainDriver {
 
 	/**
@@ -45,6 +50,19 @@ public class MainDriver {
 		System.out.println("Sorted List");
 		quickSorter.printList(quickSorter.quickSortIntegers(unsortedList));
 
+		// File I/O
+		System.out.println("\n\nFile I/O Exercise:");
+		System.out.println("------------------");
+
+		TextfileWriter writeFiles = new TextfileWriter();
+		if(writeFiles.startWriting()){
+			System.out.println("Files have been written successfully");
+		}
+		else{
+			System.out.println("There has been an error writing the files");
+		}
+
+		
 		System.out.println("\nDone");
 	}
 
