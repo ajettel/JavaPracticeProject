@@ -22,4 +22,7 @@ public class Student {
 	public void setGrade(double grade) {
 		this.grade = grade;
 	}
+	public void printStudent() {
+		System.out.println("Name: " + this.name + " Student#: " + studentNumber + " Grade: " + grade);
+	}
 }

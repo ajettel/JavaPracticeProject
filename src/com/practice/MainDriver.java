@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 import com.practice.algorithms.MergeSortIntegers;
 import com.practice.algorithms.QuickSortIntegers;
-import com.practice.datastructures.MyHashMap;
+import com.practice.dataoperations.BitShifter;
+import com.practice.dataoperations.MyHashMap;
 import com.practice.fileio.TextfileWriter;
 /**
  * This is the main function that executes the examples in this project
@@ -17,26 +18,49 @@ public class MainDriver {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Hashmap
-		System.out.println("Hashmap Exercise:");
-		System.out.println("-----------------");
+		
+//		startHashmapExercises();
+//		startMergesortExercise();
+//		startQuicksortExercise();
+//		startFileIOExercises();
+//		startBitshiftingExercise();
 
-		MyHashMap hash = new MyHashMap();
-		hash.addRandomStudents();
+		// Done all the testing
+		System.out.println("\nDone");
+	}
+	/**
+	 *  Starts the bitshifting exercises
+	 */
 
-		// Mergesorting
-		System.out.println("\n\nMergesort Exercise:");
-		System.out.println("-------------------");
+	private static void startBitshiftingExercise() {
+		System.out.println("\n\nBitshifting Exercise:");
+		System.out.println("------------------");
+		
+		BitShifter shifter = new BitShifter();
+		shifter.startExercise();
+	}
 
-		MergeSortIntegers mergeSorter = new MergeSortIntegers();
-		int[] unsorted = mergeSorter.generateRandomList(10,100);
+	/**
+	 *  Starts the file I/O exercises
+	 */
+	private static void startFileIOExercises() {
+		// File I/O
+		System.out.println("\n\nFile I/O Exercise:");
+		System.out.println("------------------");
 
-		System.out.println("Unsorted List");
-		mergeSorter.printList(unsorted);
+		TextfileWriter writeFiles = new TextfileWriter();
+		if(writeFiles.startWriting()){
+			System.out.println("Files have been written successfully");
+		}
+		else{
+			System.out.println("There has been an error writing the files");
+		}
+	}
 
-		System.out.println("Sorted List");
-		mergeSorter.printList(mergeSorter.mergeSortIntegers(unsorted));
-
+	/**
+	 * Starts the quicksort exercises
+	 */
+	private static void startQuicksortExercise() {
 		// Quicksorting
 		System.out.println("\n\nQuicksort Exercise:");
 		System.out.println("-------------------");
@@ -49,21 +73,37 @@ public class MainDriver {
 
 		System.out.println("Sorted List");
 		quickSorter.printList(quickSorter.quickSortIntegers(unsortedList));
+	}
 
-		// File I/O
-		System.out.println("\n\nFile I/O Exercise:");
-		System.out.println("------------------");
+	/**
+	 * Starts the mergesort exercises
+	 */
+	private static void startMergesortExercise() {
+		System.out.println("\n\nMergesort Exercise:");
+		System.out.println("-------------------");
 
-		TextfileWriter writeFiles = new TextfileWriter();
-		if(writeFiles.startWriting()){
-			System.out.println("Files have been written successfully");
-		}
-		else{
-			System.out.println("There has been an error writing the files");
-		}
+		MergeSortIntegers mergeSorter = new MergeSortIntegers();
+		int[] unsorted = mergeSorter.generateRandomList(10,100);
 
+		System.out.println("Unsorted List");
+		mergeSorter.printList(unsorted);
+
+		System.out.println("Sorted List");
+		mergeSorter.printList(mergeSorter.mergeSortIntegers(unsorted));
+	}
+
+	/**
+	 * Starts the hashmap exercises
+	 */
+	private static void startHashmapExercises() {
+		System.out.println("Hashmap Exercise:");
+		System.out.println("-----------------");
+
+		MyHashMap hash = new MyHashMap();
+		hash.addRandomStudents();
 		
-		System.out.println("\nDone");
+		
+
 	}
 
 }
