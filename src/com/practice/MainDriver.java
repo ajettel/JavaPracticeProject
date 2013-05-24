@@ -6,6 +6,7 @@ import com.practice.algorithms.MergeSortIntegers;
 import com.practice.algorithms.QuickSortIntegers;
 import com.practice.dataoperations.BitShifter;
 import com.practice.dataoperations.MyHashMap;
+import com.practice.dataoperations.RegExpTester;
 import com.practice.fileio.TextfileWriter;
 /**
  * This is the main function that executes the examples in this project
@@ -18,15 +19,28 @@ public class MainDriver {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-//		startHashmapExercises();
-//		startMergesortExercise();
-//		startQuicksortExercise();
-//		startFileIOExercises();
-//		startBitshiftingExercise();
+
+		startHashmapExercises();
+		startMergesortExercise();
+		startQuicksortExercise();
+		startFileIOExercises();
+		startBitshiftingExercise();
+		startRegExpExercises(); // Not done yet
 
 		// Done all the testing
 		System.out.println("\nDone");
+	}
+	/**
+	 *  Starts the regular expression exercises
+	 */
+
+	private static void startRegExpExercises() {
+		System.out.println("Regular Expression Exercise:");
+		System.out.println("------------------");
+
+		RegExpTester tester = new RegExpTester();
+		tester.start();
+
 	}
 	/**
 	 *  Starts the bitshifting exercises
@@ -35,7 +49,7 @@ public class MainDriver {
 	private static void startBitshiftingExercise() {
 		System.out.println("\n\nBitshifting Exercise:");
 		System.out.println("------------------");
-		
+
 		BitShifter shifter = new BitShifter();
 		shifter.startExercise();
 	}
@@ -96,13 +110,13 @@ public class MainDriver {
 	 * Starts the hashmap exercises
 	 */
 	private static void startHashmapExercises() {
-		System.out.println("Hashmap Exercise:");
+		System.out.println("\n\nHashmap Exercise:");
 		System.out.println("-----------------");
 
 		MyHashMap hash = new MyHashMap();
 		hash.addRandomStudents();
-		
-		
+
+
 
 	}
 
