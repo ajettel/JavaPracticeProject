@@ -2,11 +2,14 @@ package com.practice;
 
 import com.practice.algorithms.MergeSortIntegers;
 import com.practice.algorithms.QuickSortIntegers;
+import com.practice.algorithms.RecursiveBinarySearch;
 import com.practice.dataoperations.BitShifter;
 import com.practice.dataoperations.MyHashMap;
 import com.practice.dataoperations.RegExpTester;
+import com.practice.datastructures.binaryTree.BinaryTreeTester;
 import com.practice.datastructures.linkedlist.LinkedListTest;
 import com.practice.fileio.TextfileWriter;
+import com.practice.util.ArrayHelper;
 import java.util.ArrayList;
 
 /**
@@ -27,10 +30,12 @@ public class MainDriver {
         startQuicksortExercise();
         startFileIOExercises();
         startBitshiftingExercise();
-        startRegExpExercises(); // Not done yet
         startLinkedListExercises();
+        startRecursiveBinarySearchExercises();
+        startBinaryTreeExercises();
 
         // Done all the testing
+        //startRegExpExercises(); // Not done yet
         System.out.println("\nDone");
     }
 
@@ -82,7 +87,8 @@ public class MainDriver {
         System.out.println("-------------------");
 
         QuickSortIntegers quickSorter = new QuickSortIntegers();
-        ArrayList<Integer> unsortedList = quickSorter.generateRandomList(10, 50);
+
+        ArrayList<Integer> unsortedList = ArrayHelper.generateRandomIntegerList(10, 50);
 
         System.out.println("Unsorted List");
         quickSorter.printList(unsortedList);
@@ -124,11 +130,32 @@ public class MainDriver {
      * Starts the linked list exercises
      */
     private static void startLinkedListExercises() {
-        System.out.println("\n\nHashmap Exercise:");
+        System.out.println("\n\nLinked List Exercise:");
         System.out.println("-----------------");
 
         LinkedListTest llTest = new LinkedListTest();
         llTest.startExercises();
+    }
+
+    /**
+     * Starts the recursive binary search exercise
+     */
+    private static void startRecursiveBinarySearchExercises() {
+        System.out.println("\n\nRecursive Binary Search Exercise:");
+        System.out.println("-----------------");
+
+        RecursiveBinarySearch bSearch = new RecursiveBinarySearch();
+        bSearch.startRecursiveBinarySearch();
+    }
+
+    /**
+     * Starts the binary tree exercise
+     */
+    private static void startBinaryTreeExercises() {
+        System.out.println("\n\n Binary Tree Exercise:");
+        System.out.println("-----------------");
+
+        BinaryTreeTester bSearch = new BinaryTreeTester();
     }
 
 }

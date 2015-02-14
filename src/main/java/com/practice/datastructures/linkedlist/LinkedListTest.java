@@ -91,6 +91,8 @@ public class LinkedListTest {
      */
     private void swapThirdAndSeventhNodeTest(LinkedListNode head) {
         LinkedListNode secondNode = head.getNext();
+        LinkedListNode thirdNode = secondNode.getNext();
+        LinkedListNode fourthNode = thirdNode.getNext();
         LinkedListNode sixthNode = head;
         LinkedListNode seventhNode = null;
 
@@ -98,9 +100,6 @@ public class LinkedListTest {
             sixthNode = sixthNode.getNext();
             seventhNode = sixthNode.getNext();
         }
-
-        LinkedListNode thirdNode = secondNode.getNext();
-        LinkedListNode fourthNode = thirdNode.getNext();
 
         secondNode.setNextNode(seventhNode);
         sixthNode.setNextNode(thirdNode);

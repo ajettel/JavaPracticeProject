@@ -1,6 +1,5 @@
 package com.practice.algorithms;
 
-import java.security.SecureRandom;
 import java.util.ArrayList;
 
 /**
@@ -75,26 +74,5 @@ public class QuickSortIntegers {
         }
         System.out.println("");
 
-    }
-
-    /**
-     * A helper function that generates a list of 'size' with the 'maxValue' as
-     * the highest value in it
-     *
-     * @param size The size of the random list generated
-     * @param maxValue The maximum value found in the list [0, maxValue]
-     * @return The generated list
-     */
-    public ArrayList<Integer> generateRandomList(int size, int maxValue) {
-        ArrayList<Integer> randomNumbers = new ArrayList<>();
-        SecureRandom numberGenerator = new SecureRandom();
-        int currentIndex = 0;
-
-        while (currentIndex < size) {
-            randomNumbers.add(numberGenerator.nextInt(maxValue));
-            currentIndex++;
-        }
-
-        return randomNumbers;
     }
 }
